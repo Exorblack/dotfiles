@@ -1,0 +1,170 @@
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 17px; /* Slightly bigger font */
+    min-height: 30px;
+    border: none;
+    border-radius: 0;
+    margin: 1;
+    padding: 1;
+}
+
+window#waybar {
+    background: rgba(21, 22, 30, 0.9); /* Slightly darker and more opaque */
+    border-radius: 12px;
+    color: #cdd6f4;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    padding: 0 10px; /* Add padding for a bigger look */
+}
+
+/* Workspaces (unchanged) */
+#workspaces button {
+    padding: 0 12px;
+    color: #6c7086;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+#workspaces button.active {
+    color: #89b4fa;
+}
+
+@keyframes workspace-pulse {
+    0% { box-shadow: 0 0 0px #89b4fa; }
+    50% { box-shadow: 0 0 5px #89b4fa; }
+    100% { box-shadow: 0 0 0px #89b4fa; }
+}
+
+#workspaces button:hover {
+    background: rgba(203, 166, 247, 0.2);
+    color: #cba6f7;
+}
+
+/* Window Title */
+#window {
+    color: #cdd6f4;
+    margin: 5px 5px;
+    padding: 0px 10px;
+    border-radius: 10px;
+    background: rgba(30, 30, 46, 0.8); /* Added background for consistency */
+}
+
+/* Clock */
+#clock {
+    color: #fab387;
+    background: rgba(30, 30, 46, 0.8); /* Darker background */
+    padding: 0px 15px; /* Slightly bigger padding */
+    margin: 5px 5px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Memory */
+#memory {
+    color: #89b4fa;
+    background: rgba(30, 30, 46, 0.8); /* Darker background */
+    margin: 5px 5px;
+    padding: 0px 15px; /* Slightly bigger padding */
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* CPU */
+#cpu {
+    color: #f38ba8;
+    background: rgba(30, 30, 46, 0.8); /* Darker background */
+    margin: 5px 5px;
+    padding: 0px 15px; /* Slightly bigger padding */
+    border-radius: 10px;
+}
+
+/* Tray */
+#tray {
+    background: rgba(30, 30, 46, 0.8); /* Darker background */
+    margin: 5px 5px;
+    padding: 0px 15px; /* Slightly bigger padding */
+    border-radius: 10px;
+}
+
+/* Pulseaudio */
+#pulseaudio {
+    color: #a6e3a1;
+    background: rgba(30, 30, 46, 0.8); /* Darker background */
+    margin: 5px 5px;
+    padding: 0px 15px; /* Slightly bigger padding */
+    border-radius: 10px;
+}
+
+/* Network */
+#network {
+    color: #cba6f7;
+    background: rgba(30, 30, 46, 0.8); /* Darker background */
+    margin: 5px 5px;
+    padding: 0px 15px; /* Slightly bigger padding */
+    border-radius: 10px;
+}
+
+/* Battery */
+#battery {
+    color: #f9e2af;
+    background: rgba(30, 30, 46, 0.8); /* Darker background */
+    margin: 5px 5px;
+    padding: 0px 15px; /* Slightly bigger padding */
+    border-radius: 10px;
+}
+
+/* Custom Media */
+#custom-media {
+    color: #f5c2e7;
+    background: rgba(30, 30, 46, 0.8); /* Darker background */
+    margin: 5px 5px;
+    padding: 0px 15px; /* Slightly bigger padding */
+    border-radius: 10px;
+}
+
+/* Custom Notification */
+#custom-notification {
+    color: #89dceb;
+    background: rgba(30, 30, 46, 0.8); /* Darker background */
+    margin: 5px 5px;
+    padding: 0px 15px; /* Slightly bigger padding */
+    border-radius: 10px;
+}
+
+/* Custom Power */
+#custom-power {
+    color: #f38ba8;
+    background: rgba(30, 30, 46, 0.8); /* Darker background */
+    margin: 5px 5px;
+    padding: 0px 15px; /* Slightly bigger padding */
+    border-radius: 10px;
+}
+
+/* Nightlight Theme */
+#custom-nightlight {
+    color: #89b4fa; /* Blue text */
+    background: rgba(30, 30, 46, 0.8); /* Darker background */
+    margin: 5px 5px;
+    padding: 0px 15px; /* Slightly bigger padding */
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+#custom-nightlight.enabled {
+    color: #f9e2af; /* Yellow text when enabled */
+    background: rgba(249, 226, 175, 0.1); /* Subtle yellow background */
+}
+
+/* Hover Effects */
+#memory:hover,
+#cpu:hover,
+#clock:hover,
+#pulseaudio:hover,
+#network:hover,
+#battery:hover,
+#custom-media:hover,
+#custom-notification:hover,
+#custom-power:hover,
+#custom-nightlight:hover {
+    background: #313244; /* Darker hover background */
+}
