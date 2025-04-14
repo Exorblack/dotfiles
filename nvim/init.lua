@@ -32,6 +32,7 @@ vim.keymap.set("n", "x", '"_x', { noremap = true }) -- Also for deleting single 
 vim.keymap.set("n", "s", '"_s', { noremap = true }) -- Stop `s` from copying
 vim.keymap.set("n", "<C-a>", "ggVG", { noremap = true, silent = true })
 
+
 -- load plugins
 require("lazy").setup({
   {
