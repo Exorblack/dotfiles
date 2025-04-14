@@ -126,6 +126,9 @@ zstyle ':completion:*:*:docker-*:*' option-stacking yes
 alias c='clear'
 alias q='exit'
 alias ..='cd ..'
+alias ls='exa --icons'
+alias vim='nvim'
+alias vi='nvim'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
