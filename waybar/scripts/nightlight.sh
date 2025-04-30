@@ -4,8 +4,8 @@
 # Uses `hyprsunset` to enable/disable night light.
 
 STATE_FILE="/tmp/hypr_nightlight_state"
-NIGHT_TEMP=5000
-DAY_TEMP=6500
+NIGHT_TEMP=4000
+DAY_TEMP=5500
 
 # Function to check current status
 is_nightlight_active() {

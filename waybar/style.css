@@ -10,7 +10,6 @@
 
 window#waybar {
     background: rgba(21, 22, 30, 0.9); /* Slightly darker and more opaque */
-    border-radius: 12px;
     color: #cdd6f4;
     transition-property: background-color;
     transition-duration: 0.5s;

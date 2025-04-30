@@ -2,11 +2,7 @@
     "layer": "top",
     "position": "top",
     "height": 40,
-    "spacing": 6,
-    "margin-top": 5,
-    "margin-left": 12,
-    "margin-right": 12,
-    
+       
     "modules-left": [
         "hyprland/workspaces",
         "hyprland/window",
@@ -58,7 +54,7 @@
         "format": "{:%I:%M %p}",
         "format-alt": "{:%A, %B %d, %Y}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "on-click": "hyprctl dispatch exec alacritty -e calcurse",
+        "on-click": "hyprctl dispatch exec kitty -e calcurse",
         "calendar": {
             "mode": "month",
             "weeks-pos": "right",
@@ -179,3 +175,7 @@
         "warning": true
     }
 }
+{
+  "font": "DejaVu Sans, Noto Sans Arabic, 12"
+}
+
