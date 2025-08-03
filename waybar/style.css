@@ -1,6 +1,6 @@
 * {
     font-family: "JetBrainsMono Nerd Font";
-    font-size: 17px; /* Slightly bigger font */
+    font-size: 17px; 
     min-height: 30px;
     border: none;
     border-radius: 0;
@@ -9,11 +9,11 @@
 }
 
 window#waybar {
-    background: rgba(21, 22, 30, 0.9); /* Slightly darker and more opaque */
+    background: rgba(21, 22, 30, 0.9); 
     color: #cdd6f4;
     transition-property: background-color;
     transition-duration: 0.5s;
-    padding: 0 10px; /* Add padding for a bigger look */
+    padding: 0 10px; 
 }
 
 /* Workspaces (unchanged) */
@@ -45,14 +45,14 @@ window#waybar {
     margin: 5px 5px;
     padding: 0px 10px;
     border-radius: 10px;
-    background: rgba(30, 30, 46, 0.8); /* Added background for consistency */
+    background: rgba(30, 30, 46, 0.8); 
 }
 
 /* Clock */
 #clock {
-    color: #fab387;
-    background: rgba(30, 30, 46, 0.8); /* Darker background */
-    padding: 0px 15px; /* Slightly bigger padding */
+    color: #8caaee;
+    background: rgba(30, 30, 46, 0.8); 
+    padding: 0px 15px; 
     margin: 5px 5px;
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
@@ -60,10 +60,10 @@ window#waybar {
 
 /* Memory */
 #memory {
-    color: #89b4fa;
-    background: rgba(30, 30, 46, 0.8); /* Darker background */
+    color: #8caaee;
+    background: rgba(30, 30, 46, 0.8); 
     margin: 5px 5px;
-    padding: 0px 15px; /* Slightly bigger padding */
+    padding: 0px 15px; 
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
 }
@@ -71,88 +71,121 @@ window#waybar {
 /* CPU */
 #cpu {
     color: #f38ba8;
-    background: rgba(30, 30, 46, 0.8); /* Darker background */
+    background: rgba(30, 30, 46, 0.8); 
     margin: 5px 5px;
-    padding: 0px 15px; /* Slightly bigger padding */
+    padding: 0px 15px; 
     border-radius: 10px;
 }
 
 /* Tray */
 #tray {
-    background: rgba(30, 30, 46, 0.8); /* Darker background */
+    background: rgba(30, 30, 46, 0.8); 
     margin: 5px 5px;
-    padding: 0px 15px; /* Slightly bigger padding */
+    padding: 0px 15px; 
     border-radius: 10px;
 }
 
 /* Pulseaudio */
 #pulseaudio {
     color: #a6e3a1;
-    background: rgba(30, 30, 46, 0.8); /* Darker background */
+    background: rgba(30, 30, 46, 0.8); 
     margin: 5px 5px;
-    padding: 0px 15px; /* Slightly bigger padding */
+    padding: 0px 15px; 
     border-radius: 10px;
 }
 
 /* Network */
 #network {
     color: #cba6f7;
-    background: rgba(30, 30, 46, 0.8); /* Darker background */
+    background: rgba(30, 30, 46, 0.8); 
     margin: 5px 5px;
-    padding: 0px 15px; /* Slightly bigger padding */
+    padding: 0px 15px; 
     border-radius: 10px;
 }
 
 /* Battery */
 #battery {
     color: #f9e2af;
-    background: rgba(30, 30, 46, 0.8); /* Darker background */
+    background: rgba(30, 30, 46, 0.8); 
     margin: 5px 5px;
-    padding: 0px 15px; /* Slightly bigger padding */
+    padding: 0px 15px; 
     border-radius: 10px;
 }
 
 /* Custom Media */
 #custom-media {
     color: #f5c2e7;
-    background: rgba(30, 30, 46, 0.8); /* Darker background */
+    background: rgba(30, 30, 46, 0.8); 
     margin: 5px 5px;
-    padding: 0px 15px; /* Slightly bigger padding */
+    padding: 0px 15px; 
     border-radius: 10px;
 }
 
 /* Custom Notification */
 #custom-notification {
     color: #89dceb;
-    background: rgba(30, 30, 46, 0.8); /* Darker background */
+    background: rgba(30, 30, 46, 0.8); 
     margin: 5px 5px;
-    padding: 0px 15px; /* Slightly bigger padding */
+    padding: 0px 15px; 
     border-radius: 10px;
 }
 
 /* Custom Power */
 #custom-power {
     color: #f38ba8;
-    background: rgba(30, 30, 46, 0.8); /* Darker background */
+    background: rgba(30, 30, 46, 0.8); 
     margin: 5px 5px;
-    padding: 0px 15px; /* Slightly bigger padding */
+    padding: 0px 15px; 
     border-radius: 10px;
 }
 
 /* Nightlight Theme */
 #custom-nightlight {
-    color: #89b4fa; /* Blue text */
-    background: rgba(30, 30, 46, 0.8); /* Darker background */
+    color: #89b4fa; 
+    background: rgba(30, 30, 46, 0.8); 
     margin: 5px 5px;
-    padding: 0px 15px; /* Slightly bigger padding */
+    padding: 0px 15px; 
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
 }
 
 #custom-nightlight.enabled {
-    color: #f9e2af; /* Yellow text when enabled */
-    background: rgba(249, 226, 175, 0.1); /* Subtle yellow background */
+    color: #f9e2af;  
+    background: rgba(249, 226, 175, 0.1); 
 }
+
+
+#custom-music
+
+#custom-docker {
+  background-color: #101010;
+  padding: 0.5rem 1rem;
+  margin: 5px 0;
+}
+
+#custom-docker {
+    color: #85c1dc;
+  }
+
+#custom-music {
+      color: #ca9ee6;
+      border-radius: 5px;
+}
+#custom-docker.docker {
+  color: #85c1dc;
+}
+
+#custom-docker.docker-none {
+  color: #737994;
+}
+
+#custom-docker.docker-error {
+  color: #e78284;
+}
+
+
+
+
 
 /* Hover Effects */
 #memory:hover,
@@ -165,5 +198,5 @@ window#waybar {
 #custom-notification:hover,
 #custom-power:hover,
 #custom-nightlight:hover {
-    background: #313244; /* Darker hover background */
+    background: #313244; 
 }

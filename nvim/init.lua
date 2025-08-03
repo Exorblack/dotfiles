@@ -43,6 +43,7 @@ require("lazy").setup({
     defaults = { timeout = 60000 }
   },
   { import = "plugins" },
+
 }, lazy_config)
 
 -- load theme
