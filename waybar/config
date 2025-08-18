@@ -6,7 +6,6 @@
     "modules-left": [
         "hyprland/workspaces",
         "hyprland/window",
-        "custom/music",
     ],
     
     "modules-center": [
@@ -51,7 +50,7 @@
             "(.*) - Brave": " $1",
             "(.*) - Firefox": " $1",
             "(.*) - Visual Studio Code": "󰨞 $1",
-            "(.*)ghostty": " $1"
+            "(.*)wezterm": " $1"
         }
     },
     
@@ -59,7 +58,7 @@
         "format": "{:%I:%M %p}",
         "format-alt": "{:%A, %B %d, %Y}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "on-click": "hyprctl dispatch exec ghostty -e calcurse",
+        "on-click": "hyprctl dispatch exec wezterm -e calcurse",
         "calendar": {
             "mode": "month",
             "weeks-pos": "right",
@@ -78,7 +77,7 @@
         "tooltip": true,
         "tooltip-format": "RAM: {used:0.1f}GB/{total:0.1f}GB",
         "interval": 2,
-        "on-click-right": "ghostty -e btop",
+        "on-click-right": "wezterm -e btop",
         "states": {
             "warning": 70,
             "critical": 90
@@ -91,7 +90,7 @@
         "tooltip": true,
         "tooltip-format": "Load: {load}\nUsage: {usage}%",
         "interval": 2,
-        "on-click-right": "ghostty -e btop",
+        "on-click-right": "wezterm -e btop",
         "states": {
             "warning": 70,
             "critical": 90
@@ -105,7 +104,7 @@
         "format-disconnected": "󰤮 Disconnected",
         "format-alt": "󰤢 {bandwidthUpBits} | 󰤥 {bandwidthDownBits}",
         "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
-        "on-click-right": "ghostty -e nmtui"
+        "on-click-right": "wezterm -e nmtui"
     },
     
     "pulseaudio": {
@@ -159,18 +158,6 @@
     "on-click": "~/.config/waybar/scripts/nightlight.sh toggle",
     "interval": 5,
     "tooltip": false
-},
-
-"custom/music": {
-    "format": " {}",
-    "escape": true,
-    "interval": 1,
-    "tooltip": true,
-    "exec": "playerctl metadata --format '{{ artist }} - {{ title }}' || echo 'No Player' ",
-    "on-click": "playerctl play-pause", // Toggle play/pause
-    "on-scroll-up": "playerctl volume 0.05+", 
-    "on-scroll-down": "playerctl volume 0.05-", 
-    "max-length": 50
 },
 
 "custom/docker": {
