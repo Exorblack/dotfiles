@@ -194,10 +194,15 @@ vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' }
 
 -- Map Ctrl+Z to undo in normal and insert modes
 vim.keymap.set('n', '<C-z>', 'u', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-S-z>', '<C-r>', { noremap = true, silent = true }) -- redo
 
 -- Navigate buffers
 vim.keymap.set('n', '<Tab>', ':BufferLineCycleNext<CR>', { desc = 'Next buffer' })
 vim.keymap.set('n', '<S-Tab>', ':BufferLineCyclePrev<CR>', { desc = 'Previous buffer' })
+
+--Ctrl+S to save in normal and insert modes
+vim.keymap.set('n', '<C-s>', ':w<CR>', { noremap = true, silent = true })
+vim.keymap.set('i', '<C-s>', '<Esc>:w<CR>a', { noremap = true, silent = true })
 
 -- TIP: Disable arrow keys in normal mode
 -- vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
@@ -222,6 +227,10 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 --
 vim.keymap.set('n', '<A-up>', ':m -2<CR>==', { noremap = true, silent = true })
 vim.keymap.set('n', '<A-down>', ':m +1<CR>==', { noremap = true, silent = true })
+vim.keymap.set('v', '<A-up>', ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
+vim.keymap.set('v', '<A-down>', ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
+
+----------
 vim.keymap.set('n', '<C-S-d>', 'yyp', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-Left>', '<C-w>h', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-Right>', '<C-w>l', { noremap = true, silent = true })
