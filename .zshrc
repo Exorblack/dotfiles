@@ -1,42 +1,20 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# Clone zcomet if necessary
+if [[ ! -f ${ZDOTDIR:-${HOME}}/.zcomet/bin/zcomet.zsh ]]; then
+  command git clone https://github.com/agkozak/zcomet.git ${ZDOTDIR:-${HOME}}/.zcomet/bin
 fi
 
-
-### Added by Zinit's installer
-if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
-    print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
-    command mkdir -p "$HOME/.local/share/zinit" && command chmod g-rwX "$HOME/.local/share/zinit"
-    command git clone https://github.com/zdharma-continuum/zinit "$HOME/.local/share/zinit/zinit.git" && \
-        print -P "%F{33} %F{34}Installation successful.%f%b" || \
-        print -P "%F{160} The clone has failed.%f%b"
-fi
-
-source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
-autoload -Uz _zinit
-(( ${+_comps} )) && _comps[zinit]=_zinit
-### End of Zinit's installer chunk
-#
-#
-# Add in Powerlevel10k
-zinit ice depth=1; zinit light romkatv/powerlevel10k
-
-zinit ice wait lucid
-zinit light zsh-users/zsh-completions
-
-autoload -Uz compinit
-compinit
+source ${ZDOTDIR:-${HOME}}/.zcomet/bin/zcomet.zsh
 
 # Add in zsh plugins
-zinit light zsh-users/zsh-syntax-highlighting
-#zinit light zsh-users/zsh-completions
-zinit light zsh-users/zsh-autosuggestions
-zinit light Aloxaf/fzf-tab
-zinit light jeffreytse/zsh-vi-mode
+zcomet load zsh-users/zsh-syntax-highlighting
+zcomet load zsh-users/zsh-completions
+zcomet load zsh-users/zsh-autosuggestions
+zcomet load Aloxaf/fzf-tab
+zcomet load jeffreytse/zsh-vi-mode
 
+
+# install oh-my-posh 
+eval "$(~/.local/bin/oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.json)"
 
 #######################################################
 # ZSH Basic Options
@@ -54,18 +32,12 @@ setopt promptsubst         # enable command substitution in prompt
 #######################################################
 # Environment Variables
 #######################################################
-# export EDITOR=nvim
-# export VISUAL=nvim
-export EDITOR=nvim visudo
-export VISUAL=nvim visudo
+export EDITOR=nvim 
+export VISUAL=nvim 
 export SUDO_EDITOR=nvim
 export FCEDIT=nvim
-export TERMINAL=alacritty
+export TERMINAL=kitty
 export BROWSER=com.brave.Browser
-if [[ -x "$(command -v bat)" ]]; then
-	export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-	export PAGER=bat
-fi
 
 if [[ -x "$(command -v fzf)" ]]; then
 	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
@@ -126,12 +98,11 @@ zstyle ':completion:*:*:docker-*:*' option-stacking yes
 alias c='clear'
 alias q='exit'
 alias ..='cd ..'
-alias ls='exa --icons'
+alias ls='eza --icons'
 alias vim='nvim'
 alias vi='nvim'
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+alias printon='sudo systemctl start cups.service'
+alias printoff='sudo systemctl stop cups.service'
 
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -148,6 +119,8 @@ function y() {
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-export PATH="$HOME/.rbenv/shoms:$PATH" 
+export PATH="$HOME/.rbenv/shoms:$PATH"
+export PATH="$HOME/.local/bin/:$PATH"
+export MPD_SOCKET=~/.config/mpd/socket
 
 
