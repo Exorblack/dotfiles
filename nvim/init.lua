@@ -241,6 +241,12 @@ vim.keymap.set('n', '<C-v>', '"+p', { noremap = true, silent = true })
 vim.keymap.set('v', '<C-v>', '"+p', { noremap = true, silent = true })
 vim.keymap.set('i', '<C-v>', '<C-r>+', { noremap = true, silent = true })
 
+vim.keymap.set('v', '<C-x>', '"+d', { noremap = true, silent = true, desc = 'Cut selected text' })
+vim.keymap.set('n', '<C-x>', 'dd"+', { noremap = true, silent = true, desc = 'Cut current line' })
+
+vim.keymap.set('n', 'dw', '"_dw', { noremap = true, desc = 'Delete word (no copy)' })
+vim.keymap.set('n', 'dd', '"_dd', { noremap = true, desc = 'Delete line (no copy)' })
+
 vim.keymap.set('v', 'd', '"_d', { noremap = true })
 vim.keymap.set('v', 'D', '"_D', { noremap = true })
 vim.keymap.set('n', 'x', '"_x', { noremap = true }) -- Also for deleting single characters
