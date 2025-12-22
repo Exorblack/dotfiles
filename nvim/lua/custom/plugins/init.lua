@@ -17,7 +17,6 @@ return {
   require 'custom.plugins.markdown',
   require 'custom.plugins.diff-view',
   require 'custom.plugins.toggleterm',
-  require 'custom.plugins.tailwind',
 
   {
     'developedbyed/marko.nvim',

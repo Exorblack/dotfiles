@@ -20,6 +20,7 @@ return {
           'svelte',
           'jsx',
           'tsx',
+          'rs',
         },
       },
     }
