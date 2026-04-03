@@ -18,15 +18,15 @@ return {
   require 'custom.plugins.diff-view',
   require 'custom.plugins.toggleterm',
 
-  {
-    'developedbyed/marko.nvim',
-    config = function()
-      require('marko').setup {
-        width = 100,
-        height = 100,
-        border = 'rounded',
-        title = ' Marko ',
-      }
-    end,
-  },
+  -- {
+  --   'developedbyed/marko.nvim',
+  --   config = function()
+  --     require('marko').setup {
+  --       width = 100,
+  --       height = 100,
+  --       border = 'rounded',
+  --       title = ' Marko ',
+  --     }
+  --   end,
+  -- },
 }
