@@ -3,6 +3,9 @@ if [[ ! -f ${ZDOTDIR:-${HOME}}/.zcomet/bin/zcomet.zsh ]]; then
   command git clone https://github.com/agkozak/zcomet.git ${ZDOTDIR:-${HOME}}/.zcomet/bin
 fi
 
+autoload -Uz compinit
+compinit -u
+
 source ${ZDOTDIR:-${HOME}}/.zcomet/bin/zcomet.zsh
 
 # Add in zsh plugins
@@ -103,6 +106,7 @@ alias vim='nvim'
 alias vi='nvim'
 alias printon='sudo systemctl start cups.service'
 alias printoff='sudo systemctl stop cups.service'
+alias syu='sudo dnf upgrade'
 
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
